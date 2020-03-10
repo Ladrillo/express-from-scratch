@@ -1,6 +1,7 @@
 // import express app and cors
 const express = require('express')
 const cors = require('cors')
+const friendsRouter = require('./friends-router')
 
 // instantiate the app
 const app = express()
@@ -12,6 +13,9 @@ app.use(cors())
 // we need to opt-in to body-parsing
 // and this comes with express
 app.use(express.json())
+
+// we connect the router using .use
+app.use(friendsRouter)
 
 app.get('/hello', (req, res) => {
   const { pal } = req.query

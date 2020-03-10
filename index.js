@@ -25,7 +25,6 @@ app.get('/api/friends', (req, res) => {
 // make me a [POST] that has the desired name somewhere in the request
 // send back???
 app.post('/api/friends', (req, res) => {
-  console.log(req.body)
   const { friend } = req.body
   friends.push(friend)
   res.status(201).json(friend)

@@ -23,6 +23,11 @@ app.get('/api/friends', (req, res) => {
   res.status(200).json(friends)
 })
 
+app.get('/hello', (req, res) => {
+  const { pal } = req.query
+  res.send(`<h1>Hello, ${pal}</h1>`)
+})
+
 app.post('/api/friends', (req, res) => {
   const { friend } = req.body
   // THE DIFFERENT WAYS CLIENT CAN SEND INFO TO SERVER

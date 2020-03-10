@@ -9,6 +9,20 @@ const app = express()
 // carry special headers to enable CORS
 app.use(cors())
 
+const friends = ['Alison', 'Zak', 'Rufai']
+
+app.get('/api/friends', (req, res) => {
+  // res.json()
+  // res.send()
+  // res.end()
+  res.status(200).json(friends)
+})
+
+// make me a [POST] that has the desired name somewhere in the request
+// send back???
+
+
+
 const PORT = 3000
 
 app.listen(PORT, () => {

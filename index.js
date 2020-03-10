@@ -16,18 +16,17 @@ app.use(express.json())
 const friends = ['Alison', 'Zak', 'Rufai']
 
 app.get('/api/friends', (req, res) => {
+  // THE DIFFERENT WAYS SERVER CAN RESPOND TO CLIENT
   // res.json()
   // res.send()
-  // res.end()
+  // res.end() // no body in the response
   res.status(200).json(friends)
 })
 
-// make me a [POST] that has the desired name somewhere in the request
-// send back???
 app.post('/api/friends', (req, res) => {
   const { friend } = req.body
-  // THE DIFFERENT WAYS CLIENT CAN SEND INFO TO SERVER!!!
-  // const { body } = req
+  // THE DIFFERENT WAYS CLIENT CAN SEND INFO TO SERVER !!!
+  // const { body } = req // REMEMBER TO app.use(express.json()) !!!
   // const { params } = req
   // const { headers } = req
   // const { query } = req

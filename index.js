@@ -25,7 +25,7 @@ app.get('/api/friends', (req, res) => {
 
 app.get('/hello', (req, res) => {
   const { pal } = req.query
-  res.send(`<h1>Hello, ${pal}</h1>`)
+  res.send(`<h1>Hello, ${pal + pal}</h1>`)
 })
 
 app.post('/api/friends', (req, res) => {

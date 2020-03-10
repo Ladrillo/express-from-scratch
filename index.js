@@ -25,7 +25,7 @@ app.get('/api/friends', (req, res) => {
 
 app.post('/api/friends', (req, res) => {
   const { friend } = req.body
-  // THE DIFFERENT WAYS CLIENT CAN SEND INFO TO SERVER !!!
+  // THE DIFFERENT WAYS CLIENT CAN SEND INFO TO SERVER
   // const { body } = req // REMEMBER TO `app.use(express.json())` !!!
   // const { params } = req
   // const { headers } = req

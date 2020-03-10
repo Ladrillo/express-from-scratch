@@ -26,6 +26,13 @@ app.get('/api/friends', (req, res) => {
 // send back???
 app.post('/api/friends', (req, res) => {
   const { friend } = req.body
+  // THE DIFFERENT WAYS CLIENT CAN SEND INFO TO SERVER!!!
+  // const { body } = req
+  // const { params } = req
+  // const { headers } = req
+  // const { query } = req
+
+console.log(query);
   friends.push(friend)
   res.status(201).json(friend)
 })

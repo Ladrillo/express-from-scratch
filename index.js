@@ -31,8 +31,6 @@ app.post('/api/friends', (req, res) => {
   // const { params } = req
   // const { headers } = req
   // const { query } = req
-
-console.log(query);
   friends.push(friend)
   res.status(201).json(friend)
 })
